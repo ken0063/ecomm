@@ -1,4 +1,4 @@
-import { Header } from "@/components";
+import { Header, Nav } from "@/components";
 import "./globals.css";
 import { Josefin_Sans } from "next/font/google";
 
@@ -16,10 +16,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={josefinSans.className}>
-      {/* <header> */}
-      <Header />
-      {/* </header> */}
-      <body>{children}</body>
+      <body>
+        <Header />
+        <Nav />
+        {children}
+      </body>
     </html>
   );
 }
